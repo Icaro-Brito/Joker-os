@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joker O.S - Nova Ordem de Serviço</title>
+</head>
+
+<body>
+    <header>
+        <h1>Joker O.S</h1>
+        <p>Sistema de Gestão de Assistência Técnica</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Abertura de ordem de Serviço</h2>
+
+            <form id="form-os">
+                <!-- Dados do cliente -->
+                <fieldset>
+                    <legend>Dados do Cliente</legend>
+
+                    <label for="cliente-nome">Nome do cliente:</label><br>
+                    <input type="text" id="cliente-nome" name="clienteNome" required
+                        placeholder="Ex: Maria Silva"><br><br>
+
+                    <label for="cliente-whatsapp">Whatsapp (somente números com DDD):</label><br>
+                    <input type="tel" id="cliente-whatsapp" name="clienteWhatsapp" required maxlength="11"
+                        pattern="[0-9]{11}" title="Digite 11 numeros (DDD + Número, ex: 8199998888)"
+                        placeholder="Ex: 81999998888"><br><br>
+                </fieldset>
+
+                <br>
+
+                <!-- Dados do Equipamento-->
+                <fieldset>
+                    <legend>Dados do equipamento</legend>
+
+                    <label for="equipamento">Equipamento/Modelo:</label><br>
+                    <input type="text" id="equipamento" name="equipamento" required
+                        placeholder="Ex: Pedal Mooer Overdrive"><br><br>
+
+                    <label for="defeito-relatado">Defeito Relatado:</label><br>
+                    <textarea id="defeito-relatado" name="defeitoRelatado" rows="4"
+                        placeholder="Ex: Não liga ao acionar o efeito"></textarea><br><br>
+                </fieldset>
+
+                <br>
+
+                <button type="submit">Cadastrar O.S.</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Joker O.S. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
