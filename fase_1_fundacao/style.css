@@ -206,3 +206,57 @@ footer {
     font-size: 0.85rem;
     color: #64748b;
 }
+
+/* Estilos Exclusivos do Dashboard (Cards) */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.card {
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 0.85rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* Cores dos Cards */
+.card-azul {
+    background-color: #2563eb;
+}
+
+.card-amarelo {
+    background-color: #d97706;
+}
+
+.card-verde {
+    background-color: #059669;
+}
+
+.card-roxo {
+    background-color: #7c3aed;
+}
+
+.card-vermelho {
+    background-color: #dc2626;
+}
+
+
+.status.expirado {
+    background-color: #fee2e2;
+    color: #991b1b;
+}

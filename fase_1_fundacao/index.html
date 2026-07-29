@@ -4,10 +4,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>O.s Dashboard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <header>
+        <h1>Joker O.S.</h1>
+        <p>Sistema de Gestão de Assistência Técnica</p>
+
+        <nav>
+            <a href="index.html" class="ativo">Dashboard</a> |
+            <a href="os-abertas.html">O.S. Abertas</a> |
+            <a href="#">O.S. Finalizadas</a> |
+            <a href="#">Entregues / Garantia</a> |
+            <a href="fora-garantia.html">Fora de Garantia</a> |
+            <a href="login.html">Sair / Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="topo-acoes">
+            <h2>Painel Geral (Dashboard)</h2>
+            <a href="nova-os.html" class="btn-primario">+ Nova O.S.</a>
+        </section>
+
+        <!-- Cards de Métricas -->
+        <section class="cards-grid">
+            <div class="card card-azul">
+                <h3>12</h3>
+                <p>O.S. Abertas (Bancada)</p>
+            </div>
+
+            <div class="card card-amarelo">
+                <h3>5</h3>
+                <p>Aguardando Aprovação</p>
+            </div>
+
+            <div class="card card-verde">
+                <h3>28</h3>
+                <p>Concluídas este Mês</p>
+            </div>
+
+            <div class="card card-roxo">
+                <h3>14</h3>
+                <p>Garantias Ativas</p>
+            </div>
+
+            <div class="card card-vermelho">
+                <h3>8</h3>
+                <p>Fora de Garantia</p>
+            </div>
+        </section>
+
+        <br><br>
+
+        <!-- Resumo de Atividades Recentes -->
+        <section>
+            <h3>Últimas Movimentações</h3>
+            <br>
+            <div class="tabela-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nº O.S.</th>
+                            <th>Cliente</th>
+                            <th>Equipamento</th>
+                            <th>Status</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#002</td>
+                            <td>João Pedro</td>
+                            <td>Guitarra Michael Stratocaster</td>
+                            <td><span class="status aguardando">Aguardando Diagnóstico</span></td>
+                            <td><a href="#" class="btn-tabela">Ver</a></td>
+                        </tr>
+                        <tr>
+                            <td>#001</td>
+                            <td>Maria Silva</td>
+                            <td>Pedal Mooer Overdrive</td>
+                            <td><span class="status em-conserto">Em Conserto</span></td>
+                            <td><a href="#" class="btn-tabela">Ver</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Joker O.S. - Todos os direitos reservados.</p>
+    </footer>
 
 </body>
 

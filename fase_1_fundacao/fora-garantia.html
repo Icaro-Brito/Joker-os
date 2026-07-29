@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joker O.S. - Equipamentos Fora de Garantia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Joker O.S.</h1>
+        <p>Sistema de Gestão de Assistência Técnica</p>
+        <nav>
+            <a href="index.html" class="ativo">Dashboard</a> |
+            <a href="os-abertas.html">O.S. Abertas</a> |
+            <a href="#">O.S. Finalizadas</a> |
+            <a href="#">Entregues / Garantia</a> |
+            <a href="fora-garantia.html">Fora de Garantia</a> |
+            <a href="login.html">Sair / Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="topo-acoes">
+            <h2>Equipamentos com Garantia Expirada</h2>
+            <a href="nova-os.html" class="btn-primario">+ Nova O.S.</a>
+        </section>
+
+        <!-- Barra de Pesquisa -->
+        <section class="filtro-busca">
+            <input type="text" id="busca-fora-garantia"
+                placeholder="Pesquisar por O.S. anterior, cliente ou equipamento...">
+        </section>
+
+        <!-- Tabela de Equipamentos Fora de Garantia -->
+        <section class="tabela-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nº O.S. Origem</th>
+                        <th>Cliente</th>
+                        <th>Equipamento</th>
+                        <th>Data de Entrega</th>
+                        <th>Garantia Expirada em</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#000-ANTIGA</td>
+                        <td>Carlos Eduardo</td>
+                        <td>MacBook Air M1</td>
+                        <td>15/01/2026</td>
+                        <td><span class="status expirado">15/04/2026 (Expirada)</span></td>
+                        <td><a href="nova-os.html" class="btn-tabela">Abrir Nova O.S. Pago</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Joker O.S. - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
