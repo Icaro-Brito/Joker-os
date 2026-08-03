@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joker O.S. - Equipamentos em Garantia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Joker O.S.</h1>
+    <p>Sistema de Gestão de Assistência Técnica</p>
+     <nav>
+            <a href="index.html">Dashboard</a> | 
+            <a href="os-abertas.html">O.S. Abertas</a> | 
+            <a href="os-finalizadas.html" class="ativo">O.S. Finalizadas</a> | 
+            <a href="garantia.html">Entregues / Garantia</a> |
+            <a href="fora-garantia.html">Fora de Garantia</a> |
+            <a href="login.html">Sair / Login</a>
+        </nav>
+  </header>
+
+  <main>
+    <section class="topo-acoes">
+      <h2>Equipamentos Entregues em Garantia Ativa</h2>
+      <a href="nova-os.html" class="btn-primario">+ Nova O.S.</a>
+    </section>
+
+    <!-- Barra de Pesquisa -->
+    <section class="filtro-busca">
+      <input type="text" id="busca-garantia" placeholder="Pesquisar por Nº O.S., cliente ou equipamento...">
+    </section>
+
+    <!-- Tabela de Garantia -->
+    <section class="tabela-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Nº O.S. Origem</th>
+            <th>Cliente</th>
+            <th>Equipamento</th>
+            <th>Data de Entrega</th>
+            <th>Garantia Válida Até</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#001</td>
+            <td>Maria Silva</td>
+            <td>Notebook Dell Inspiron</td>
+            <td>28/07/2026</td>
+            <td><span class="status em-conserto">28/10/2026 (Ativa)</span></td>
+            <td><a href="#" class="btn-tabela">Abrir Retorno Garantia</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Joker O.S. - Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
