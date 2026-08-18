@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joker O.S. - Retorno de Garantia</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <div>
+                <h1>Joker O.S.</h1>
+                <p>Sistema de Gestão de Assistência Técnica</p>
+            </div>
+            <nav>
+                <a href="index.html">Dashboard</a>
+                <a href="os-abertas.html">O.S. Abertas</a>
+                <a href="os-finalizadas.html">O.S. Finalizadas</a>
+                <a href="garantia.html" class="ativo">Entregues / Garantia</a>
+                <a href="fora-garantia.html">Fora de Garantia</a>
+                <a href="equipe.html">Equipe / Colaboradores</a>
+                <a href="login.html" class="btn-sair">Sair</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container-largura-total">
+        <section class="topo-acoes">
+            <h2>Abertura de Retorno de Garantia (Sem Custo)</h2>
+            <a href="garantia.html" class="btn-secundario">Voltar</a>
+        </section>
+
+        <!-- Card do Equipamento de Origem -->
+        <section class="card-painel" style="margin-bottom: 24px; border-left: 4px solid var(--warning);">
+            <h3>Dados da O.S. de Origem (#003-ANTIGA)</h3>
+            <div class="grid-dashboard" style="margin-top: 12px;">
+                <p><strong>Cliente:</strong> Fernanda Lima</p>
+                <p><strong>Equipamento:</strong> PlayStation 5</p>
+                <p><strong>Data de Entrega Anterior:</strong> 10/06/2026</p>
+                <p><strong>Status Garantia:</strong> <span class="status em-andamento">Válida até 10/09/2026</span></p>
+            </div>
+        </section>
+
+        <!-- Formulário do Retorno -->
+        <section class="card-painel">
+            <h3>Registro do Novo Defeito Relatado</h3>
+
+            <form action="os-abertas.html" id="form-garantia">
+                <div class="campo-grupo">
+                    <label for="defeito-garantia">Relato do Cliente / Novo Sintoma</label>
+                    <textarea id="defeito-garantia" rows="3" placeholder="Descreva o que voltou a apresentar defeito..."
+                        required>Aparelho voltou a desligar sozinho após 20 minutos de uso em jogos pesados.</textarea>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="obs-tecnico">Observações Iniciais de Bancada</label>
+                    <textarea id="obs-tecnico" rows="2"
+                        placeholder="Avarias físicas na reentrada, acessórios trazidos pelo cliente..."></textarea>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="fotos">Fotos de Reentrada (Avarias / Estado do Aparelho)</label>
+                    <input type="file" id="fotos" multiple>
+                </div>
+
+                <button type="button" class="btn-primario" onclick="confirmarAberturaGarantia()">Confirmar Abertura de
+                    Garantia</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Joker O.S. - Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Vínculo com o arquivo JS externo -->
+    <script src="js/retorno-garantia.js"></script>
+
+</body>
+
+</html>

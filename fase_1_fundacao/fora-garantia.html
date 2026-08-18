@@ -1,29 +1,34 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joker O.S. - Equipamentos Fora de Garantia</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
     <header>
-        <h1>Joker O.S.</h1>
-        <p>Sistema de Gestão de Assistência Técnica</p>
-       <nav>
-            <a href="index.html">Dashboard</a> | 
-            <a href="os-abertas.html">O.S. Abertas</a> | 
-            <a href="os-finalizadas.html" class="ativo">O.S. Finalizadas</a> | 
-            <a href="garantia.html">Entregues / Garantia</a> |
-            <a href="fora-garantia.html">Fora de Garantia</a> |
-            <a href="login.html">Sair / Login</a>
-        </nav>
+        <div class="header-content">
+            <div>
+                <h1>Joker O.S.</h1>
+                <p>Sistema de Gestão de Assistência Técnica</p>
+            </div>
+            <nav>
+                <a href="index.html">Dashboard</a>
+                <a href="os-abertas.html">O.S. Abertas</a>
+                <a href="os-finalizadas.html">O.S. Finalizadas</a>
+                <a href="garantia.html">Entregues / Garantia</a>
+                <a href="fora-garantia.html" class="ativo">Fora de Garantia</a>
+                <a href="equipe.html">Equipe / Colaboradores</a>
+                <a href="login.html" class="btn-sair">Sair</a>
+            </nav>
+        </div>
     </header>
 
-    <main>
+    <main class="container-largura-total">
         <section class="topo-acoes">
             <h2>Equipamentos com Garantia Expirada</h2>
             <a href="nova-os.html" class="btn-primario">+ Nova O.S.</a>

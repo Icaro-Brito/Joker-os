@@ -1,0 +1,503 @@
+/* ==============================
+   1. RESET E VARIÁVEIS GLOBAIS
+   ============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary: #1e1e2f;
+    /* Cor principal escura (Sidebar/Header) */
+    --accent: #6c5ce7;
+    /* Cor do Joker OS (Roxo/Destaque) */
+    --bg: #f4f6f9;
+    /* Fundo geral */
+    --card-bg: #ffffff;
+    /* Fundo de cards e containers */
+    --text: #2d3436;
+    /* Texto principal */
+    --text-muted: #636e72;
+    /* Texto secundário */
+    --success: #00b894;
+    /* Status: Concluído / Verde */
+    --warning: #fdcb6e;
+    /* Status: Em andamento / Amarelo */
+    --danger: #d63031;
+    /* Status: Sem conserto / Vermelho */
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+/* ===================
+   2. TELA DE LOGIN
+   ===================*/
+
+.body-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--primary) 0%, #0f0c20 100%);
+    padding: 20px;
+}
+
+.container-login {
+    background-color: var(--card-bg);
+    width: 100%;
+    max-width: 400px;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.cabecalho-login {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cabecalho-login h1 {
+    color: var(--accent);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.cabecalho-login p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.campo-grupo {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-grupo label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+
+.campo-grupo input {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.campo-grupo input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.2);
+}
+
+.btn-primario {
+    background-color: var(--accent);
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn-primario:hover {
+    background-color: #5b4bc4;
+}
+
+.btn-primario:active {
+    transform: scale(0.98);
+}
+
+.btn-bloco {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.rodape-card-login {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.rodape-card-login a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.rodape-card-login a:hover {
+    text-decoration: underline;
+}
+
+
+/* ============================
+   3. DASHBOARD E LAYOUT BASE 
+   ============================*/
+header {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 15px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+header p {
+    font-size: 0.8rem;
+    color: #a0aec0;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+nav a {
+    color: #cbd5e0;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+nav a:hover,
+nav a.ativo {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+nav .btn-sair {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.topo-acoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+/* Grids e Cards de Métricas */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid var(--accent);
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.card-azul {
+    border-left-color: #0984e3;
+}
+
+.card-azul h3 {
+    color: #0984e3;
+}
+
+.card-amarelo {
+    border-left-color: #fdcb6e;
+}
+
+.card-amarelo h3 {
+    color: #d63031;
+}
+
+.card-verde {
+    border-left-color: var(--success);
+}
+
+.card-verde h3 {
+    color: var(--success);
+}
+
+.card-roxo {
+    border-left-color: var(--accent);
+}
+
+.card-roxo h3 {
+    color: var(--accent);
+}
+
+.card-vermelho {
+    border-left-color: var(--danger);
+}
+
+.card-vermelho h3 {
+    color: var(--danger);
+}
+
+/* Tabelas e Status */
+.tabela-container {
+    background: var(--card-bg);
+    border-radius: 8px;
+    overflow-x: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #edf2f7;
+    font-size: 0.9rem;
+}
+
+th {
+    background-color: #f8fafc;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.status {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status.aguardando {
+    background: #fff3bf;
+    color: #f59f00;
+}
+
+.status.em-conserto {
+    background: #e7f5ff;
+    color: #1c7ed6;
+}
+
+.btn-tabela {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    margin-top: 40px;
+}
+
+/* ===========================
+   4. CADASTRO E FORMULÁRIOS 
+   ===========================*/
+.container-form {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.container-form h2 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.subtitulo-form {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+fieldset {
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: 600;
+    color: var(--accent);
+    font-size: 0.95rem;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    resize: vertical;
+    font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.2);
+}
+
+.acoes-form {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.btn-secundario {
+    background-color: #e2e8f0;
+    color: #4a5568;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.btn-secundario:hover {
+    background-color: #cbd5e0;
+}
+
+.campo-grupo select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background-color: #ffffff;
+    color: var(--text-color);
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.campo-grupo select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.15);
+}
+
+/* ====================
+    5. TABELA DE 0.S 
+   ====================*/
+
+.container-largura-total {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.filtro-busca {
+    margin-bottom: 20px;
+}
+
+.filtro-busca input {
+    width: 100%;
+    padding: 12px 18px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.filtro-busca input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.15);
+}
+
+.btn-tabela {
+    background-color: rgba(108, 92, 231, 0.1);
+    color: var(--accent);
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-tabela:hover {
+    background-color: var(--accent);
+    color: #ffffff;
+}
+
+/* Status Verde e Botão de Ação de Baixa */
+.status.concluido {
+    background: #d3f9d8;
+    color: #2b8a3e;
+}
+
+.btn-tabela.btn-sucesso {
+    background-color: rgba(0, 184, 148, 0.1);
+    color: var(--success);
+}
+
+.btn-tabela.btn-sucesso:hover {
+    background-color: var(--success);
+    color: #ffffff;
+}
+
+/* =======================
+   6. RECIBOS E GARANTIA
+   =======================*/
+
+.status.expirado {
+    background: #ffe3e3;
+    color: var(--danger);
+}

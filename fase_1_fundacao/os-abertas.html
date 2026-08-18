@@ -5,22 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joker O.S. - O.S. Abertas</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
-        <h1>Joker O.S.</h1>
-        <p>Sistema de Gestão de Assistência Técnica</p>
-
-        <nav>
-            <a href="index.html">Dashboard</a> | 
-            <a href="os-abertas.html">O.S. Abertas</a> | 
-            <a href="os-finalizadas.html" class="ativo">O.S. Finalizadas</a> | 
-            <a href="garantia.html">Entregues / Garantia</a> |
-            <a href="fora-garantia.html">Fora de Garantia</a> |
-            <a href="login.html">Sair / Login</a>
-        </nav>
+        <div class="header-content">
+            <div>
+                <h1>Joker O.S.</h1>
+                <p>Sistema de Gestão de Assistência Técnica</p>
+            </div>
+            <nav>
+                <a href="index.html">Dashboard</a>
+                <a href="os-abertas.html" class="ativo">O.S. Abertas</a>
+                <a href="os-finalizadas.html">O.S. Finalizadas</a>
+                <a href="garantia.html">Entregues / Garantia</a>
+                <a href="fora-garantia.html">Fora de Garantia</a>
+                <a href="equipe.html">Equipe / Colaboradores</a>
+                <a href="login.html" class="btn-sair">Sair</a>
+            </nav>
+        </div>
     </header>
 
     <main class="container-largura-total">
@@ -31,7 +35,7 @@
 
         <!-- Barra de Pesquisa -->
         <section class="filtro-busca">
-            <input type="text" id="busca-os" placeholder="Pesquisar por n° da O.S., nome do cliente ou equipamento...">
+            <input type="text" id="busca-os" placeholder="Pesquisar por nº da O.S., nome do cliente ou equipamento...">
         </section>
 
         <!-- Tabela de O.S em Aberto -->
@@ -39,24 +43,23 @@
             <table>
                 <thead>
                     <tr>
-                        <th>N° O.S.</th>
+                        <th>Nº O.S.</th>
                         <th>Data/Hora Abertura</th>
-                        <th>Clientes</th>
-                        <th>Equipamentos</th>
+                        <th>Cliente</th>
+                        <th>Equipamento</th>
                         <th>Status</th>
-                        <th>Ações</th>
+                        <th>Ação</th>
                     </tr>
                 </thead>
 
                 <tbody>
-                    <!-- Exemplo Visual de como as O.S> vão aparecer na bancada -->
                     <tr>
                         <td>#001</td>
                         <td>28/07/2026 - 10:15</td>
                         <td>Maria Silva</td>
                         <td>Pedal Mooer Overdrive</td>
                         <td><span class="status em-conserto">Em Conserto</span></td>
-                        <td><a href="#" class="btn-tabela">Atender / Ver O.S</a></td>
+                        <td><a href="detalhes-os.html" class="btn-tabela">Atender / Ver O.S.</a></td>
                     </tr>
                     <tr>
                         <td>#002</td>
@@ -64,7 +67,7 @@
                         <td>João Pedro</td>
                         <td>Guitarra Michael Stratocaster</td>
                         <td><span class="status aguardando">Aguardando Diagnóstico</span></td>
-                        <td><a href="#" class="btn-tabela">Atender / Ver O.S.</a></td>
+                        <td><a href="detalhes-os.html" class="btn-tabela">Atender / Ver O.S.</a></td>
                     </tr>
                 </tbody>
             </table>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joker O.S. - Detalhes da O.S. #001</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <div>
+                <h1>Joker O.S.</h1>
+                <p>Sistema de Gestão de Assistência Técnica</p>
+            </div>
+            <nav>
+                <a href="index.html">Dashboard</a>
+                <a href="os-abertas.html" class="ativo">O.S. Abertas</a>
+                <a href="os-finalizadas.html">O.S. Finalizadas</a>
+                <a href="garantia.html">Entregues / Garantia</a>
+                <a href="fora-garantia.html">Fora de Garantia</a>
+                <a href="equipe.html">Equipe / Colaboradores</a>
+                <a href="login.html" class="btn-sair">Sair</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container-largura-total">
+        <section class="topo-acoes">
+            <h2>Ordem de Serviço #001</h2>
+            <div>
+                <a href="os-abertas.html" class="btn-secundario">Voltar</a>
+                <button type="button" class="btn-primario" onclick="window.print()">Imprimir O.S.</button>
+            </div>
+        </section>
+
+        <!-- Grid de Informações da O.S. -->
+        <div class="grid-dashboard" style="margin-bottom: 24px;">
+            <!-- Dados do Cliente -->
+            <section class="card-painel">
+                <h3>Dados do Cliente</h3>
+                <p><strong>Nome:</strong> Maria Silva</p>
+                <p>
+                    <strong>Telefone/WhatsApp:</strong> (81) 98888-7777
+                    <a href="https://wa.me/5581988887777?text=Olá,%20Maria!%20Tudo%20bem?%20Estou%20entrando%20em%20contato%20sobre%20o%20seu%20pedal%20Mooer%20Overdrive%20(O.S.%20%23001)%20na%20Joker%20O.S."
+                        target="_blank" class="btn-whatsapp">WhatsApp</a>
+                </p>
+                <p><strong>E-mail:</strong> maria.silva@email.com</p>
+                <p><strong>CPF:</strong> 123.456.789-00</p>
+            </section>
+
+            <!-- Dados do Equipamento -->
+            <section class="card-painel">
+                <h3>Equipamento</h3>
+                <p><strong>Tipo/Modelo:</strong> Pedal Mooer Overdrive</p>
+                <p><strong>Nº de Série:</strong> PM OV001</p>
+                <p><strong>Acessórios Entregues:</strong> Fonte original</p>
+                <p><strong>Data de Entrada:</strong> 28/07/2026</p>
+            </section>
+        </div>
+
+        <!-- Defeito e Diagnóstico -->
+        <section class="card-painel" style="margin-bottom: 24px;">
+            <h3>Diagnóstico e Andamento</h3>
+
+            <form action="#">
+                <div class="campo-grupo">
+                    <label>Defeito Relatado pelo Cliente</label>
+                    <textarea rows="2" readonly
+                        style="background-color: #f8fafc;">Aparelho sai som desligado, mas ao ligar sinal morre</textarea>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="laudo-tecnico">Laudo Técnico / Diagnóstico de Bancada</label>
+                    <textarea id="laudo-tecnico" rows="3"
+                        placeholder="Descreva o teste realizado e a falha identificada...">Chave de acionamento 3pdt danificada, necessário substituição da mesma.</textarea>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="status-os">Status Atual</label>
+                    <select id="status-os">
+                        <option value="analise">Em Análise</option>
+                        <option value="orcamento" selected>Aguardando Aprovação do Cliente</option>
+                        <option value="peca">Aguardando Peça</option>
+                        <option value="execucao">Em Reparo / Execução</option>
+                        <option value="concluido">Concluído (Aguardando Retirada)</option>
+                    </select>
+                </div>
+
+                <!-- Detalhamento Financeiro (Custos, Peças e Lucro) -->
+                <div class="grid-dashboard"
+                    style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-top: 16px;">
+                    <div class="campo-grupo">
+                        <label for="custo-peca">Custo da Peça (R$)</label>
+                        <input type="number" id="custo-peca" value="30.00" step="0.01" oninput="calcularValores()">
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="valor-mao-obra">Mão de Obra (R$)</label>
+                        <input type="number" id="valor-mao-obra" value="70.00" step="0.01" oninput="calcularValores()">
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="valor-servico">Valor Total Cliente (R$)</label>
+                        <input type="text" id="valor-servico" value="R$ 100,00" readonly
+                            style="background-color: #f1f5f9; font-weight: bold;">
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="lucro-estimado">Lucro Líquido (R$)</label>
+                        <input type="text" id="lucro-estimado" value="R$ 70,00" readonly
+                            style="background-color: #dcfce7; color: #166534; font-weight: bold;">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primario" style="margin-top: 20px;">Salvar Alterações da O.S.</button>
+            </form>
+        </section>
+
+        <!-- Galeria de Fotos da Entrada -->
+        <section class="card-painel">
+            <h3>Fotos da Entrada do Equipamento</h3>
+            <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 12px;">
+                <div
+                    style="width: 120px; height: 120px; background: #e2e8f0; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #64748b; font-size: 0.85rem;">
+                    Foto 1 (Frente)</div>
+                <div
+                    style="width: 120px; height: 120px; background: #e2e8f0; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #64748b; font-size: 0.85rem;">
+                    Foto 2 (Avarias)</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Joker O.S. - Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Vínculo com o arquivo JS externo -->
+    <script src="js/detalhes-os.js"></script>
+
+</body>
+
+</html>

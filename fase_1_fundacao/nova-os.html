@@ -4,62 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joker O.S - Nova Ordem de Serviço</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Joker O.S. - Nova Ordem de Serviço</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
-        <h1>Joker O.S</h1>
-        <p>Sistema de Gestão de Assistência Técnica</p>
-
-        <nav>
-            <a href="index.html">Dashboard</a> | 
-            <a href="os-abertas.html">O.S. Abertas</a> | 
-            <a href="os-finalizadas.html" class="ativo">O.S. Finalizadas</a> | 
-            <a href="garantia.html">Entregues / Garantia</a> |
-            <a href="fora-garantia.html">Fora de Garantia</a> |
-            <a href="login.html">Sair / Login</a>
-        </nav>
+        <div class="header-content">
+            <div>
+                <h1>Joker O.S.</h1>
+                <p>Sistema de Gestão de Assistência Técnica</p>
+            </div>
+            <nav>
+                <a href="index.html">Dashboard</a>
+                <a href="os-abertas.html">O.S. Abertas</a>
+                <a href="os-finalizadas.html">O.S. Finalizadas</a>
+                <a href="garantia.html">Entregues / Garantia</a>
+                <a href="fora-garantia.html">Fora de Garantia</a>
+                <a href="equipe.html">Equipe / Colaboradores</a>
+                <a href="login.html" class="btn-sair">Sair</a>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section>
-            <h2>Abertura de ordem de Serviço</h2>
+        <section class="container-form">
+            <h2>Abertura de Ordem de Serviço</h2>
+            <p class="subtitulo-form">Preencha os dados abaixo para dar entrada no equipamento.</p>
 
             <form id="form-os">
                 <!-- Dados do cliente -->
                 <fieldset>
                     <legend>Dados do Cliente</legend>
 
-                    <label for="cliente-nome">Nome do cliente:</label><br>
-                    <input type="text" id="cliente-nome" name="clienteNome" required
-                        placeholder="Ex: Maria Silva"><br><br>
+                    <div class="campo-grupo">
+                        <label for="cliente-nome">Nome do Cliente:</label>
+                        <input type="text" id="cliente-nome" name="clienteNome" required placeholder="Ex: Maria Silva">
+                    </div>
 
-                    <label for="cliente-whatsapp">Whatsapp (somente números com DDD):</label><br>
-                    <input type="tel" id="cliente-whatsapp" name="clienteWhatsapp" required maxlength="11"
-                        pattern="[0-9]{11}" title="Digite 11 numeros (DDD + Número, ex: 8199998888)"
-                        placeholder="Ex: 81999998888"><br><br>
+                    <div class="campo-grupo">
+                        <label for="cliente-whatsapp">WhatsApp (DDD + Número):</label>
+                        <input type="tel" id="cliente-whatsapp" name="clienteWhatsapp" required maxlength="11"
+                            pattern="[0-9]{11}" title="Digite 11 números (DDD + Número, ex: 81999998888)"
+                            placeholder="Ex: 81999998888">
+                    </div>
                 </fieldset>
 
-                <br>
-
-                <!-- Dados do Equipamento-->
+                <!-- Dados do Equipamento -->
                 <fieldset>
-                    <legend>Dados do equipamento</legend>
+                    <legend>Dados do Equipamento</legend>
 
-                    <label for="equipamento">Equipamento/Modelo:</label><br>
-                    <input type="text" id="equipamento" name="equipamento" required
-                        placeholder="Ex: Pedal Mooer Overdrive"><br><br>
+                    <div class="campo-grupo">
+                        <label for="equipamento">Equipamento / Modelo:</label>
+                        <input type="text" id="equipamento" name="equipamento" required
+                            placeholder="Ex: Pedal Mooer Overdrive">
+                    </div>
 
-                    <label for="defeito-relatado">Defeito Relatado:</label><br>
-                    <textarea id="defeito-relatado" name="defeitoRelatado" rows="4"
-                        placeholder="Ex: Não liga ao acionar o efeito"></textarea><br><br>
+                    <div class="campo-grupo">
+                        <label for="defeito-relatado">Defeito Relatado pelo Cliente:</label>
+                        <textarea id="defeito-relatado" name="defeitoRelatado" rows="4" required
+                            placeholder="Ex: Não liga ao acionar o chaveamento de efeito."></textarea>
+                    </div>
                 </fieldset>
 
-                <br>
-
-                <button type="submit">Cadastrar O.S.</button>
+                <div class="acoes-form">
+                    <button type="submit" class="btn-primario">Cadastrar O.S.</button>
+                    <a href="index.html" class="btn-secundario">Cancelar</a>
+                </div>
             </form>
         </section>
     </main>
