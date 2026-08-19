@@ -2,6 +2,17 @@
    1. RESET E VARIÁVEIS GLOBAIS
    ============================== */
 
+/* Registro de Fonte Personalizada */
+
+@font-face {
+    font-family: 'Defused';
+    src: url('fonts/Defused-ExtendedBold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Reset Global */
 * {
     margin: 0;
     padding: 0;
@@ -69,6 +80,7 @@ body {
     font-weight: 700;
     margin-bottom: 8px;
     letter-spacing: 1px;
+    font-family: 'Defused', sans-serif;
 }
 
 .cabecalho-login p {
@@ -167,6 +179,7 @@ header {
 }
 
 header h1 {
+    font-family: 'Defused', sans-serif;
     font-size: 1.5rem;
     color: #fff;
 }
